@@ -7,6 +7,7 @@
 " Vundle {{{
 set nocompatible
 filetype off
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -77,13 +78,11 @@ Plugin 'wavded/vim-stylus'
 
 Plugin 'spacepluk/vim-powerline'
 Plugin 'spacepluk/vim-xoria256'
+
+filetype plugin indent on
 " }}}
 
 syntax on
-filetype on
-filetype plugin on
-filetype indent on
-
 set modelines=4
 set history=1000
 set number
