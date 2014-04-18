@@ -33,6 +33,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'leafo/moonscript-vim'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'LStinson/TagmaBufMgr'
 Plugin 'majutsushi/tagbar'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mattn/calendar-vim'
@@ -74,7 +75,6 @@ Plugin 'vim-scripts/The-NERD-Commenter'
 Plugin 'vim-scripts/utl.vim'
 Plugin 'wavded/vim-stylus'
 
-Plugin 'spacepluk/TagmaBufMgr'
 Plugin 'spacepluk/vim-powerline'
 Plugin 'spacepluk/vim-xoria256'
 " }}}
@@ -309,6 +309,7 @@ nnoremap <leader>rp :RainbowParenthesesToggle<CR>
 " }}}
 
 " tagmabufmgr {{{
+let g:TagmaBufMgrMapChjkl = 0
 let g:TagmaBufMgrLastWindow = 1
 let g:TagmaBufMgrStatusLine = ' '
 hi def link     TagmaBufMgrPlain        Identifier
