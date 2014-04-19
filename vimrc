@@ -39,6 +39,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'mintplant/vim-literate-coffeescript'
+Plugin 'mmozuras/vim-github-comment'
 Plugin 'moll/vim-node'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'othree/html5.vim'
@@ -356,6 +357,11 @@ au BufRead,BufNewFile *.pde,*.ino setf arduino
 " NERDTree {{{
 let g:NERDTreeHijackNetrw = 1
 " }}}
+
+" vim-github-comment {{{ "
+let g:github_user = 'spacepluk'
+let g:github_comment_open_browser = 1
+" }}} vim-github-comment "
 
 
 
