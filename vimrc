@@ -23,6 +23,7 @@ Plugin 'gkz/vim-ls'
 Plugin 'godlygeek/tabular'
 Plugin 'gregsexton/MatchTag'
 Plugin 'groenewege/vim-less'
+Plugin 'honza/vim-snippets'
 Plugin 'jceb/vim-orgmode'
 Plugin 'jinfield/vim-nginx'
 Plugin 'jpalardy/vim-slime'
@@ -52,6 +53,7 @@ Plugin 'qrps/lilypond-vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'SirVer/ultisnips'
 Plugin 'sjl/gundo.vim'
 Plugin 'Soares/butane.vim'
 Plugin 'tclem/vim-arduino'
@@ -302,8 +304,13 @@ hi def link     TagmaBufMgrUnloaded     Comment
 nnoremap <leader>gu :GundoToggle<CR>
 " }}}
 
-" snipmate {{{
-let g:snips_author = 'Oscar Morante <oscar.morante@mirada.tv'
+" UltiSnips {{{
+let g:snips_author = 'Oscar Morante <oscar@morante.eu>'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsEditSplit="vertical"
 " }}}
 
 " slime {{{
