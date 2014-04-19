@@ -66,7 +66,6 @@ Plugin 'vim-scripts/ikiwiki-syntax'
 Plugin 'vim-scripts/IndentAnything'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/mru.vim'
-Plugin 'vim-scripts/SyntaxComplete'
 Plugin 'vim-scripts/The-NERD-Commenter'
 Plugin 'vim-scripts/utl.vim'
 Plugin 'wavded/vim-stylus'
@@ -143,15 +142,6 @@ nnoremap <leader>ee :NERDTreeToggle<CR>
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\|\t\+/ containedin=ALL
 nnoremap <leader>ws :highlight ExtraWhitespace ctermbg=red guibg=red<CR>
 nnoremap <leader>wo :highlight ExtraWhitespace NONE<CR>
-" }}}
-
-" syntaxcomplete {{{
-if has("autocmd") && exists("+omnifunc")
-autocmd Filetype *
-        \   if &omnifunc == "" |
-        \       setlocal omnifunc=syntaxcomplete#Complete |
-        \   endif
-endif
 " }}}
 
 " make {{{
