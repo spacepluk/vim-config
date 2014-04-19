@@ -10,6 +10,7 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 Plugin 'airblade/vim-gitgutter'
+Plugin 'bigfish/vim-js-context-coloring'
 Plugin 'bjoernricks/vim-cmake'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-fswitch'
@@ -363,6 +364,11 @@ let g:github_user = 'spacepluk'
 let g:github_comment_open_browser = 1
 " }}} vim-github-comment "
 
+" vim-js-context-coloring {{{ "
+let g:js_context_colors_enabled = 0
+nnoremap <leader>jc :JSContextColorToggle<CR>
+
+" }}} vim-js-context-coloring "
 
 
 """ Per-language tweaks
