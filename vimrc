@@ -14,6 +14,7 @@ Plugin 'bjoernricks/vim-cmake'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'derekwyatt/vim-protodef'
+Plugin 'dhruvasagar/vim-vinegar'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'freitass/todo.txt-vim'
@@ -122,12 +123,6 @@ color xoria256
 " Change buffers
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
-
-" Change windows (replaced w/ vim-tmux-navigator)
-"nnoremap <C-h> <C-W>h
-"nnoremap <C-j> <C-W>j
-"nnoremap <C-k> <C-W>k
-"nnoremap <C-l> <C-W>l
 
 " File explorer
 nnoremap <leader>ww :NERDTreeFind<CR>
@@ -356,6 +351,10 @@ au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl,*.vsh,*.fsh setf glsl
 
 " arduino {{{
 au BufRead,BufNewFile *.pde,*.ino setf arduino
+" }}}
+
+" NERDTree {{{
+let g:NERDTreeHijackNetrw = 1
 " }}}
 
 
