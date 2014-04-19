@@ -1,7 +1,3 @@
-" vim:fdm=marker
-
-
-
 " Global vim settings {{{
 
 " Vundle {{{
@@ -406,3 +402,6 @@ autocmd FileType yaml setl shiftwidth=2 tabstop=2 expandtab
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 " }}}
 
+
+
+" vim:fdm=marker
