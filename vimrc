@@ -46,7 +46,6 @@ Plugin 'peterhoeg/vim-qml'
 Plugin 'phleet/vim-mercenary'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'qrps/lilypond-vim'
-Plugin 'Rip-Rip/clang_complete'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -59,6 +58,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/Arduino-syntax-file'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/glsl.vim'
@@ -210,14 +210,9 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 noremap <silent> <Leader>ig :IndentGuidesToggle<CR>
 " }}}
 
-" clang-complete {{{
-let g:clang_complete_copen = 1
-let g:clang_library_path = "/usr/lib/llvm-3.3/lib"
-let g:clang_use_library = 1
-let g:clang_hl_errors = 1
-let g:clang_auto_select = 1
-let g:clang_snippets = 1
-"let g:clang_snippets_engine = "snipmate"
+" YouCompleteMe {{{
+let g:ycm_key_list_select_completion = ['<Enter>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
 " }}}
 
 " ctags {{{
