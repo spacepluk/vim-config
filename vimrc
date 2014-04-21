@@ -28,6 +28,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-scripts/IndentAnything'
 Plugin 'gregsexton/MatchTag'
+Plugin 'bitc/vim-bad-whitespace'
 
 " General Coding aids
 Plugin 'honza/vim-snippets'
@@ -159,12 +160,6 @@ nnoremap <C-n> :bnext<CR>
 
 """ Misc tweaks & mappings
 
-" highlight whitespace {{{
-autocmd Syntax * syn match ExtraWhitespace /\s\+$\|\t\+/ containedin=ALL
-nnoremap <leader>ws :highlight ExtraWhitespace ctermbg=red guibg=red<CR>
-nnoremap <leader>wo :highlight ExtraWhitespace NONE<CR>
-" }}}
-
 " make {{{
 nnoremap <silent> ,mm :make<CR><CR>
 nnoremap <silent> ,mf :make<CR><CR>:cn<CR>
@@ -223,6 +218,11 @@ noremap <silent> <Leader>ig :IndentGuidesToggle<CR>
 " YouCompleteMe {{{
 let g:ycm_key_list_select_completion = ['<Enter>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
+" }}}
+
+" bad-whitespace {{{
+nnoremap <leader>ws :ToggleBadWhitespace<CR>
+nnoremap <leader>wd :EraseBadWhitespace<CR>
 " }}}
 
 " ctags {{{
