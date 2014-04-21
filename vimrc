@@ -127,10 +127,6 @@ color xoria256
 " Change buffers
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
-
-" File explorer
-nnoremap <leader>ww :NERDTreeFind<CR>
-nnoremap <leader>ee :NERDTreeToggle<CR>
 " }}}
 
 
@@ -269,17 +265,6 @@ nmap <silent> ,oJ :FSSplitBelow<CR>
 
 " doxygen {{{
 nnoremap <silent> ,dd :Dox<CR>
-" }}}
-
-" eclim {{{
-let g:EclimMakeLCD='no'
-let g:EclimJavaSearchSingleResult='edit'
-nnoremap <leader>jj :JavaSearchContext<CR>
-nnoremap <leader>jh :JavaHierarchy<CR>
-nnoremap <leader>ji :JavaImportMissing<CR>
-nnoremap <leader>jo :JavaImportClean<CR>
-nnoremap <leader>jd :JavaDocComment<CR>
-nnoremap <leader>jc :JavaCorrect<CR>
 " }}}
 
 " Rainbow Parentheses {{{
