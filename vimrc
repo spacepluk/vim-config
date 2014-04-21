@@ -95,6 +95,7 @@ Plugin 'vim-scripts/ikiwiki-syntax'
 Plugin 'vim-scripts/utl.vim'
 
 " Colorschemes
+Plugin 'CSApprox'
 Plugin 'sickill/vim-monokai'
 Plugin 'spacepluk/vim-xoria256'
 
@@ -142,6 +143,8 @@ let g:html_use_css=1
 set guifont=Ubuntu\ Mono\ 12
 set guioptions=eAa
 set t_Co=256
+let g:CSApprox_use_showrgb = 1
+
 color xoria256
 " }}}
 
