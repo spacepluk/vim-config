@@ -27,7 +27,6 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-scripts/IndentAnything'
-Plugin 'gregsexton/MatchTag'
 Plugin 'bitc/vim-bad-whitespace'
 
 " General Coding aids
@@ -56,6 +55,7 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 
 " HTML/Javascript
 Plugin 'bigfish/vim-js-context-coloring'
+Plugin 'gregsexton/MatchTag'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mattn/emmet-vim'
