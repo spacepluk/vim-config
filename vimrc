@@ -181,7 +181,7 @@ nnoremap <leader>jq :!jq '.'
 
 " Email flowed text {{{
 " function stolen from: http://vim.wikia.com/wiki/Correct_format-flowed_email_function
-function! Fixflowed()  
+function! Fixflowed()
   let pos = getpos(".")
   silent! %s/\([^]> :]\)\ze\n>[> ]*[^> ]/\1 /g
   silent! %s/ \+\ze\n[> ]*$//
@@ -204,7 +204,7 @@ autocmd Filetype mail set fo+=aw
 " powerline {{{
 let g:Powerline_symbols = 'fancy'
 " }}}
-"
+
 " indent-guides {{{
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
@@ -258,18 +258,18 @@ endif
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_mruf_relative = 1
 let g:ctrlp_prompt_mappings = {
-\ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
-\ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
-\ 'PrtHistory(-1)':       ['<c-j>'],
-\ 'PrtHistory(1)':        ['<c-k>'],
-\ }
+    \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
+    \ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
+    \ 'PrtHistory(-1)':       ['<c-j>'],
+    \ 'PrtHistory(1)':        ['<c-k>'],
+    \ }
 let g:ctrlp_user_command = {
-\ 'types': {
-\   1: ['.git', 'cd %s && git ls-files'],
-\   2: ['.hg', 'hg --cwd %s locate -I .'],
-\ },
-\   'fallback': 'find %s -type f'
-\ }
+    \ 'types': {
+    \   1: ['.git', 'cd %s && git ls-files'],
+    \   2: ['.hg', 'hg --cwd %s locate -I .'],
+    \ },
+    \   'fallback': 'find %s -type f'
+    \ }
 nnoremap <space> :CtrlPMixed<CR>
 " }}}
 
@@ -342,7 +342,7 @@ noremap <leader>bx :Bclose!<CR>     " Close the buffer & discard changes.
 " }}}
 
 " ag {{{
-nmap <leader>ag :Ag 
+nmap <leader>ag :Ag
 " }}}
 
 " javascript {{{
