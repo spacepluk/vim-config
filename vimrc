@@ -27,7 +27,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-scripts/IndentAnything'
-Plugin 'bitc/vim-bad-whitespace'
+Plugin 'spacepluk/vim-bad-whitespace'
 
 " General Coding aids
 Plugin 'honza/vim-snippets'
@@ -221,6 +221,7 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 " }}}
 
 " bad-whitespace {{{
+let g:bad_whitespace_show_tabs = 1
 nnoremap <leader>ws :ToggleBadWhitespace<CR>
 nnoremap <leader>wd :EraseBadWhitespace<CR>
 " }}}
