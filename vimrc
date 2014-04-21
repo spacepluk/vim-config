@@ -98,6 +98,7 @@ Plugin 'vim-scripts/utl.vim'
 Plugin 'CSApprox'
 Plugin 'sickill/vim-monokai'
 Plugin 'spacepluk/vim-xoria256'
+Plugin 'w0ng/vim-hybrid'
 
 
 filetype plugin indent on
