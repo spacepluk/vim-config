@@ -259,19 +259,19 @@ let g:tagbar_sort = 0
 
 " coffeescript support
 if executable('coffeetags')
-    let g:tagbar_type_coffee = {
-                \ 'ctagsbin' : 'coffeetags',
-                \ 'ctagsargs' : '--include-vars',
-                \ 'kinds' : [
-                \ 'f:functions',
-                \ 'o:object',
-                \ ],
-                \ 'sro' : ".",
-                \ 'kind2scope' : {
-                \ 'f' : 'object',
-                \ 'o' : 'object',
-                \ }
-                \ }
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '--include-vars',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
 endif
 " }}}
 
@@ -279,17 +279,17 @@ endif
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_mruf_relative = 1
 let g:ctrlp_prompt_mappings = {
-    \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
-    \ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
-    \ 'PrtHistory(-1)':       ['<c-j>'],
-    \ 'PrtHistory(1)':        ['<c-k>'],
-    \ }
+      \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
+      \ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
+      \ 'PrtHistory(-1)':       ['<c-j>'],
+      \ 'PrtHistory(1)':        ['<c-k>'],
+      \ }
 let g:ctrlp_user_command = {
-    \ 'types': {
-    \   1: ['.git', 'cd %s && git ls-files'],
-    \   2: ['.hg', 'hg --cwd %s locate -I .'],
-    \ },
-    \   'fallback': 'find %s -type f'
+      \ 'types': {
+      \   1: ['.git', 'cd %s && git ls-files'],
+      \   2: ['.hg', 'hg --cwd %s locate -I .'],
+      \ },
+      \   'fallback': 'find %s -type f'
     \ }
 nnoremap <space> :CtrlPMixed<CR>
 " }}}
@@ -406,7 +406,6 @@ let g:github_comment_open_browser = 1
 " vim-js-context-coloring {{{ "
 let g:js_context_colors_enabled = 0
 nnoremap <leader>jc :JSContextColorToggle<CR>
-
 " }}} vim-js-context-coloring "
 
 
