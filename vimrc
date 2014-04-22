@@ -170,8 +170,6 @@ nnoremap <leader>cq :call setqflist([])<CR>:redraw!<CR>
 
 " vimdiff mappings -- git mergetool buffer numbers {{{
 nmap <silent> ,du :diffupdate<CR>
-nmap <silent> ,12 :b2<CR>:diffget 1<CR>:diffupdate<CR>
-nmap <silent> ,32 :b2<CR>:diffget 1<CR>:diffupdate<CR>
 " }}}
 
 " JSON prettyfier/processor {{{
