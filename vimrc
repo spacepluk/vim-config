@@ -255,6 +255,7 @@ nnoremap <silent> ,gt :!./gentags.sh<CR><CR>
 
 " tagbar {{{
 nnoremap <silent> ,tl :TagbarToggle<CR>
+let g:tagbar_sort = 0
 
 " coffeescript support
 if executable('coffeetags')
