@@ -14,7 +14,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'dhruvasagar/vim-vinegar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'LStinson/TagmaBufMgr'
 Plugin 'majutsushi/tagbar'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
@@ -88,7 +87,7 @@ Plugin 'jpalardy/vim-slime'
 Plugin 'mattn/calendar-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'Soares/butane.vim'
-Plugin 'spacepluk/vim-powerline'
+Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-speeddating'
 Plugin 'vim-scripts/ikiwiki-nav'
@@ -201,8 +200,30 @@ autocmd Filetype mail set fo+=aw
 
 """ Plugins
 
-" powerline {{{
-let g:Powerline_symbols = 'fancy'
+" airline {{{
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamecollapse = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+
+if g:airline_powerline_fonts
+  set encoding=utf-8
+  let g:airline_left_sep = '⮀'
+  let g:airline_left_alt_sep = '⮁'
+  let g:airline_right_sep = '⮂'
+  let g:airline_right_alt_sep = '⮃'
+
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+  let g:airline_symbols.branch = '⭠'
+  let g:airline_symbols.readonly = '⭤'
+  let g:airline_symbols.linenr = '⭡'
+endif
 " }}}
 
 " indent-guides {{{
