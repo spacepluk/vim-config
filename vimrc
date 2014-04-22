@@ -411,6 +411,10 @@ nnoremap <leader>jc :JSContextColorToggle<CR>
 
 """ Per-language tweaks
 
+" Vim {{{
+autocmd FileType vim setlocal shiftwidth=2  tabstop=2 expandtab
+" }}}
+
 " Lua {{{
 autocmd FileType lua setlocal shiftwidth=2  tabstop=2 expandtab
 " }}}
