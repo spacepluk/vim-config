@@ -318,20 +318,6 @@ nnoremap <silent> ,dd :Dox<CR>
 nnoremap <leader>rp :RainbowParenthesesToggle<CR>
 " }}}
 
-" tagmabufmgr {{{
-let g:TagmaBufMgrMapChjkl = 0
-let g:TagmaBufMgrLastWindow = 1
-let g:TagmaBufMgrStatusLine = ' '
-hi def link     TagmaBufMgrPlain        Identifier
-hi def link     TagmaBufMgrActive       Type
-hi def link     TagmaBufMgrChanged      Directory
-hi def link     TagmaBufMgrChgAct       Statement
-hi def link     TagmaBufMgrHelp         Special
-hi def link     TagmaBufMgrQFoLL        Special
-hi def link     TagmaBufMgrHelpText     String
-hi def link     TagmaBufMgrUnloaded     Comment
-" }}}
-
 " gundo {{{
 nnoremap <leader>gu :GundoToggle<CR>
 " }}}
