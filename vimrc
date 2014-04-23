@@ -107,6 +107,7 @@ filetype plugin indent on
 
 
 syntax on
+syntax conceal on
 set modelines=4
 set history=1000
 set number
