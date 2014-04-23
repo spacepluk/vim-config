@@ -40,7 +40,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/The-NERD-Commenter'
 
 " VCS
-Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-signify'
 Plugin 'mattn/gist-vim'
 Plugin 'mmozuras/vim-github-comment'
 Plugin 'phleet/vim-mercenary'
@@ -408,6 +408,18 @@ let g:js_context_colors_enabled = 0
 nnoremap <leader>jc :JSContextColorToggle<CR>
 " }}} vim-js-context-coloring "
 
+" vim-signify {{{
+let g:signify_vcs_list = [ 'git', 'hg' ]
+let g:signify_sign_change = '~'
+
+highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
+highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
+highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
+" }}}
+
+" eighties {{{
+nnoremap <leader>ee :ToggleEighties<CR>
+" }}}
 
 """ Per-language tweaks
 
