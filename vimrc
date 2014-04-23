@@ -97,9 +97,9 @@ Plugin 'vim-scripts/utl.vim'
 
 " Colorschemes
 Plugin 'CSApprox'
-Plugin 'sickill/vim-monokai'
 Plugin 'spacepluk/vim-xoria256'
-Plugin 'w0ng/vim-hybrid'
+Plugin 'tomasr/molokai'
+Plugin 'endel/vim-github-colorscheme'
 
 
 filetype plugin indent on
