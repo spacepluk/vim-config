@@ -94,6 +94,7 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'vim-scripts/ikiwiki-nav'
 Plugin 'vim-scripts/ikiwiki-syntax'
 Plugin 'vim-scripts/utl.vim'
+Plugin 'spacepluk/vim-eighties'
 
 " Colorschemes
 Plugin 'CSApprox'
