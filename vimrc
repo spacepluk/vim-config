@@ -187,6 +187,15 @@ endfunction
 
 autocmd Filetype mail command! Fixq call Fixflowed()
 autocmd Filetype mail set fo+=aw
+
+" ctags {{{
+" add current directory's generated tags file to available tags
+autocmd FileType cpp set tags+=~/.vim/tags/std
+autocmd FileType cpp set tags+=~/.vim/tags/qt4
+nnoremap <silent> ,tt :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+nnoremap <silent> ,gt :!./gentags.sh<CR><CR>
+" }}}
+
 " }}}
 
 
@@ -238,14 +247,6 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 let g:bad_whitespace_show_tabs = 1
 nnoremap <leader>ws :ToggleBadWhitespace<CR>
 nnoremap <leader>wd :EraseBadWhitespace<CR>
-" }}}
-
-" ctags {{{
-" add current directory's generated tags file to available tags
-autocmd FileType cpp set tags+=~/.vim/tags/std
-autocmd FileType cpp set tags+=~/.vim/tags/qt4
-nnoremap <silent> ,tt :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
-nnoremap <silent> ,gt :!./gentags.sh<CR><CR>
 " }}}
 
 " tagbar {{{
