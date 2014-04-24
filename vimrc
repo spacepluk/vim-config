@@ -1,4 +1,4 @@
-" Global vim settings {{{
+" Global vim settings
 
 " Vundle {{{
 set nocompatible
@@ -141,43 +141,35 @@ set directory=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 let mapleader=","
 let g:html_use_css=1
-" }}}
 
-" Look&Feel {{{
+
+" Look&Feel
 set guifont=Ubuntu\ Mono\ 12
 set guioptions=eAa
 set t_Co=256
 let g:CSApprox_use_showrgb = 1
 
 color xoria256
-" }}}
 
-" Navigation mappings {{{
+
+" Misc mappings/tweaks {{{
+
 " Change buffers
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
-" }}}
 
-
-
-""" Misc tweaks & mappings
-
-" make {{{
+" make
 nnoremap <silent> ,mm :make<CR><CR>
 nnoremap <silent> ,mf :make<CR><CR>:cn<CR>
-" }}}
 
-" Clean quickfix {{{
+" Clean quickfix
 nnoremap <leader>cq :call setqflist([])<CR>:redraw!<CR>
-" }}}
 
-" vimdiff mappings -- git mergetool buffer numbers {{{
+" vimdiff mappings
 nmap <silent> ,du :diffupdate<CR>
-" }}}
 
-" JSON prettyfier/processor {{{
+" JSON prettyfier/processor
 nnoremap <leader>jq :!jq '.'
-" }}}
 
 " Email flowed text {{{
 " function stolen from: http://vim.wikia.com/wiki/Correct_format-flowed_email_function
