@@ -131,8 +131,8 @@ set incsearch
 set smartcase
 
 set wildmenu
+set wildmode=list:longest,list:full
 set wildignore+=*.o,*/.hg,*/.git,*/build/*,*/node_modules,tags
-set wildmode=list:longest
 set completeopt=menu,menuone,preview
 
 set shiftwidth=2
