@@ -135,8 +135,8 @@ set wildignore+=*.o,*/.hg,*/.git,*/build/*,*/node_modules,tags
 set wildmode=list:longest
 set completeopt=menu,menuone,preview
 
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set smartindent
 
@@ -415,35 +415,15 @@ if has("autocmd") && exists("+omnifunc")
 endif
 " }}}
 
-
-
 """ Per-language tweaks
 
-" Vim {{{
-autocmd FileType vim setlocal shiftwidth=2  tabstop=2 expandtab
-" }}}
-
-" Lua {{{
-autocmd FileType lua setlocal shiftwidth=2  tabstop=2 expandtab
-" }}}
-
-" Javascript {{{
-autocmd FileType javascript setl shiftwidth=2 tabstop=2 expandtab
-" }}}
-
-" Coffeescript {{{
-autocmd FileType coffee setl shiftwidth=2 tabstop=2 expandtab
-" }}}
-
-" HTML {{{
-autocmd FileType html setl shiftwidth=2 tabstop=2 expandtab
-" }}}
-
-" YAML {{{
-autocmd FileType yaml setl shiftwidth=2 tabstop=2 expandtab
+" C/C++ {{{
+au FileType c setlocal shiftwidth=4  tabstop=4 expandtab
+au FileType cpp setlocal shiftwidth=4  tabstop=4 expandtab
 " }}}
 
 " XML code formatting using xmllint {{{
+au FileType xml setlocal shiftwidth=4  tabstop=4 expandtab
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 " }}}
 
