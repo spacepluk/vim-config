@@ -192,6 +192,9 @@ endfunction
 autocmd Filetype mail command! Fixq call Fixflowed()
 autocmd Filetype mail set fo+=aw
 
+nnoremap <leader>ff :Fixq<CR>
+" }}}
+
 " ctags {{{
 " add current directory's generated tags file to available tags
 autocmd FileType cpp set tags+=~/.vim/tags/std
