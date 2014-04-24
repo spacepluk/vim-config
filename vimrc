@@ -87,6 +87,7 @@ Plugin 'elzr/vim-json'
 Plugin 'artoj/qmake-syntax-vim'
 
 " Misc
+Plugin 'embear/vim-localvimrc'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'jceb/vim-orgmode'
 Plugin 'jpalardy/vim-slime'
@@ -418,6 +419,11 @@ if has("autocmd") && exists("+omnifunc")
         \   setlocal omnifunc=syntaxcomplete#Complete |
         \ endif
 endif
+" }}}
+
+" localvimrc {{{
+let g:localvimrc_sandbox = 0
+let g:localvimrc_ask = 0
 " }}}
 
 """ Per-language tweaks
