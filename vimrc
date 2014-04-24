@@ -32,12 +32,13 @@ Plugin 'spacepluk/vim-bad-whitespace'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/The-NERD-Commenter'
+Plugin 'vim-scripts/SyntaxComplete'
 
 " VCS
 Plugin 'mhinz/vim-signify'
@@ -51,6 +52,9 @@ Plugin 'bjoernricks/vim-cmake'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'osyo-manga/vim-reunions'
+Plugin 'osyo-manga/vim-marching'
 
 " HTML/Javascript
 Plugin 'bigfish/vim-js-context-coloring'
@@ -238,9 +242,8 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 noremap <silent> <Leader>ig :IndentGuidesToggle<CR>
 " }}}
 
-" YouCompleteMe {{{
-let g:ycm_key_list_select_completion = ['<Enter>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<Up>']
+" neocomplete {{{
+let g:neocomplete#enable_at_startup = 1
 " }}}
 
 " bad-whitespace {{{
@@ -402,6 +405,17 @@ highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 " eighties {{{
 nnoremap <leader>ee :ToggleEighties<CR>
 " }}}
+
+" SyntaxComplete {{{
+if has("autocmd") && exists("+omnifunc")
+  autocmd Filetype *
+        \ if &omnifunc == "" |
+        \   setlocal omnifunc=syntaxcomplete#Complete |
+        \ endif
+endif
+" }}}
+
+
 
 """ Per-language tweaks
 
