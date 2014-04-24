@@ -164,8 +164,7 @@ nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
 
 " make
-nnoremap <silent> ,mm :make<CR><CR>
-nnoremap <silent> ,mf :make<CR><CR>:cn<CR>
+nnoremap <silent> ,mm :Make<CR>
 
 " Clean quickfix
 nnoremap <leader>cq :call setqflist([])<CR>:redraw!<CR>
