@@ -279,6 +279,7 @@ endif
 
 " ctrlp {{{
 let g:ctrlp_map = '<leader>f'
+let g:ctrlp_switch_buffer = 0
 let g:ctrlp_mruf_relative = 1
 let g:ctrlp_prompt_mappings = {
       \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
@@ -293,6 +294,7 @@ let g:ctrlp_user_command = {
       \ },
       \   'fallback': 'find %s -type f'
     \ }
+
 nnoremap <space> :CtrlPMixed<CR>
 " }}}
 
