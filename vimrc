@@ -25,8 +25,8 @@ Plugin 'vim-scripts/mru.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'vim-scripts/IndentAnything'
 Plugin 'spacepluk/vim-bad-whitespace'
+Plugin 'vim-scripts/IndentAnything'
 
 " General Coding aids
 Plugin 'honza/vim-snippets'
@@ -37,12 +37,12 @@ Plugin 'SirVer/ultisnips'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/The-NERD-Commenter'
 Plugin 'vim-scripts/SyntaxComplete'
+Plugin 'vim-scripts/The-NERD-Commenter'
 
 " VCS
-Plugin 'mhinz/vim-signify'
 Plugin 'mattn/gist-vim'
+Plugin 'mhinz/vim-signify'
 Plugin 'mmozuras/vim-github-comment'
 Plugin 'phleet/vim-mercenary'
 Plugin 'tpope/vim-fugitive'
@@ -51,10 +51,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'bjoernricks/vim-cmake'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'derekwyatt/vim-protodef'
-Plugin 'vim-scripts/DoxygenToolkit.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'osyo-manga/vim-reunions'
 Plugin 'osyo-manga/vim-marching'
+Plugin 'osyo-manga/vim-reunions'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
 
 " HTML/Javascript
 Plugin 'bigfish/vim-js-context-coloring'
@@ -69,7 +69,9 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'vim-scripts/JavaScript-Indent'
 
 " Other languages
+Plugin 'artoj/qmake-syntax-vim'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'elzr/vim-json'
 Plugin 'gkz/vim-ls'
 Plugin 'groenewege/vim-less'
 Plugin 'jinfield/vim-nginx'
@@ -83,8 +85,6 @@ Plugin 'tclem/vim-arduino'
 Plugin 'vim-scripts/Arduino-syntax-file'
 Plugin 'vim-scripts/glsl.vim'
 Plugin 'wavded/vim-stylus'
-Plugin 'elzr/vim-json'
-Plugin 'artoj/qmake-syntax-vim'
 
 " Misc
 Plugin 'embear/vim-localvimrc'
@@ -95,18 +95,18 @@ Plugin 'mattn/calendar-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'Soares/butane.vim'
 Plugin 'spacepluk/vim-airline'
+Plugin 'spacepluk/vim-eighties'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-speeddating'
 Plugin 'vim-scripts/ikiwiki-nav'
 Plugin 'vim-scripts/ikiwiki-syntax'
 Plugin 'vim-scripts/utl.vim'
-Plugin 'spacepluk/vim-eighties'
 
 " Colorschemes
 Plugin 'CSApprox'
+Plugin 'endel/vim-github-colorscheme'
 Plugin 'spacepluk/vim-xoria256'
 Plugin 'tomasr/molokai'
-Plugin 'endel/vim-github-colorscheme'
 
 
 filetype plugin indent on
