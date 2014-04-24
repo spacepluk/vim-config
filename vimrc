@@ -84,6 +84,7 @@ Plugin 'vim-scripts/Arduino-syntax-file'
 Plugin 'vim-scripts/glsl.vim'
 Plugin 'wavded/vim-stylus'
 Plugin 'elzr/vim-json'
+Plugin 'artoj/qmake-syntax-vim'
 
 " Misc
 Plugin 'freitass/todo.txt-vim'
