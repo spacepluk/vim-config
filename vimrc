@@ -1,116 +1,140 @@
 " Global vim settings
 
-" Vundle {{{
-set nocompatible
-filetype off
+" NeoBundle {{{
+if has('vim_starting')
+  set nocompatible
+  filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+  set rtp+=~/.vim/bundle/neobundle.vim/
+endif
 
-Plugin 'gmarik/vundle'
+call neobundle#begin(expand('~/.vim/bundle'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Navigation
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'dhruvasagar/vim-vinegar'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'majutsushi/tagbar'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/mru.vim'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'dhruvasagar/vim-vinegar'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'vim-scripts/mru.vim'
 
 " Whitespace
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'godlygeek/tabular'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'spacepluk/vim-bad-whitespace'
-Plugin 'vim-scripts/IndentAnything'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'spacepluk/vim-bad-whitespace'
+NeoBundle 'vim-scripts/IndentAnything'
 
 " General Coding aids
-Plugin 'honza/vim-snippets'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'sjl/gundo.vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/SyntaxComplete'
-Plugin 'vim-scripts/The-NERD-Commenter'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/SyntaxComplete'
+NeoBundle 'vim-scripts/The-NERD-Commenter'
 
 " VCS
-Plugin 'mattn/gist-vim'
-Plugin 'mhinz/vim-signify'
-Plugin 'mmozuras/vim-github-comment'
-Plugin 'phleet/vim-mercenary'
-Plugin 'tpope/vim-fugitive'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mhinz/vim-signify'
+NeoBundle 'mmozuras/vim-github-comment'
+NeoBundle 'phleet/vim-mercenary'
+NeoBundle 'tpope/vim-fugitive'
 
 " C/C++
-Plugin 'bjoernricks/vim-cmake'
-Plugin 'derekwyatt/vim-fswitch'
-Plugin 'derekwyatt/vim-protodef'
-Plugin 'osyo-manga/vim-marching'
-Plugin 'osyo-manga/vim-reunions'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'vim-scripts/DoxygenToolkit.vim'
+NeoBundle 'bjoernricks/vim-cmake'
+NeoBundle 'derekwyatt/vim-fswitch'
+NeoBundle 'derekwyatt/vim-protodef'
+NeoBundle 'osyo-manga/vim-marching'
+NeoBundle 'osyo-manga/vim-reunions'
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+NeoBundle 'vim-scripts/DoxygenToolkit.vim'
 
 " HTML/Javascript
-Plugin 'bigfish/vim-js-context-coloring'
-Plugin 'gregsexton/MatchTag'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'mintplant/vim-literate-coffeescript'
-Plugin 'moll/vim-node'
-Plugin 'othree/html5.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'vim-scripts/JavaScript-Indent'
+NeoBundle 'bigfish/vim-js-context-coloring', {
+      \   'build' : {
+      \     'unix' : 'npm install',
+      \     'mac' : 'npm install',
+      \     'windows' : 'npm install',
+      \   }
+      \ }
+NeoBundle 'gregsexton/MatchTag'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'marijnh/tern_for_vim', {
+      \   'build' : {
+      \     'unix' : 'npm install',
+      \     'mac' : 'npm install',
+      \     'windows' : 'npm install',
+      \   }
+      \ }
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mintplant/vim-literate-coffeescript'
+NeoBundle 'moll/vim-node'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'vim-scripts/JavaScript-Indent'
 
 " Other languages
-Plugin 'artoj/qmake-syntax-vim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'elzr/vim-json'
-Plugin 'gkz/vim-ls'
-Plugin 'groenewege/vim-less'
-Plugin 'jinfield/vim-nginx'
-Plugin 'juvenn/mustache.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'leafo/moonscript-vim'
-Plugin 'peterhoeg/vim-qml'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'qrps/lilypond-vim'
-Plugin 'tclem/vim-arduino'
-Plugin 'vim-scripts/Arduino-syntax-file'
-Plugin 'vim-scripts/glsl.vim'
-Plugin 'wavded/vim-stylus'
+NeoBundle 'artoj/qmake-syntax-vim'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'gkz/vim-ls'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'jinfield/vim-nginx'
+NeoBundle 'juvenn/mustache.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'leafo/moonscript-vim'
+NeoBundle 'peterhoeg/vim-qml'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'qrps/lilypond-vim'
+NeoBundle 'tclem/vim-arduino'
+NeoBundle 'vim-scripts/Arduino-syntax-file'
+NeoBundle 'vim-scripts/glsl.vim'
+NeoBundle 'wavded/vim-stylus'
 
 " Misc
-Plugin 'embear/vim-localvimrc'
-Plugin 'freitass/todo.txt-vim'
-Plugin 'jceb/vim-orgmode'
-Plugin 'jpalardy/vim-slime'
-Plugin 'mattn/calendar-vim'
-Plugin 'mattn/webapi-vim'
-Plugin 'Soares/butane.vim'
-Plugin 'spacepluk/vim-airline'
-Plugin 'spacepluk/vim-eighties'
-Plugin 'tommcdo/vim-exchange.git'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-speeddating'
-Plugin 'vim-scripts/ikiwiki-nav'
-Plugin 'vim-scripts/ikiwiki-syntax'
-Plugin 'vim-scripts/utl.vim'
+NeoBundle 'embear/vim-localvimrc'
+NeoBundle 'freitass/todo.txt-vim'
+NeoBundle 'jceb/vim-orgmode'
+NeoBundle 'jpalardy/vim-slime'
+NeoBundle 'mattn/calendar-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'Soares/butane.vim'
+NeoBundle 'spacepluk/vim-airline'
+NeoBundle 'spacepluk/vim-eighties'
+NeoBundle 'tommcdo/vim-exchange.git'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'vim-scripts/ikiwiki-nav'
+NeoBundle 'vim-scripts/ikiwiki-syntax'
+NeoBundle 'vim-scripts/utl.vim'
 
 " Colorschemes
-Plugin 'CSApprox'
-Plugin 'endel/vim-github-colorscheme'
-Plugin 'spacepluk/vim-xoria256'
-Plugin 'tomasr/molokai'
+NeoBundle 'CSApprox'
+NeoBundle 'endel/vim-github-colorscheme'
+NeoBundle 'spacepluk/vim-xoria256'
+NeoBundle 'tomasr/molokai'
 
-
+call neobundle#end()
 filetype plugin indent on
+
+NeoBundleCheck
 " }}}
 
 
