@@ -374,9 +374,6 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " butane {{{
 noremap <leader>bd :Bclose<CR>      " Close the buffer.
-noremap <leader>bl :ls<CR>          " List buffers.
-noremap <leader>bn :bn<CR>          " Next buffer.
-noremap <leader>bp :bp<CR>          " Previous buffer.
 noremap <leader>bt :b#<CR>          " Toggle to most recently used buffer.
 noremap <leader>bx :Bclose!<CR>     " Close the buffer & discard changes.
 " }}}
