@@ -412,6 +412,8 @@ au BufRead,BufNewFile *.pde,*.ino setf arduino
 
 " NERDTree {{{
 let g:NERDTreeHijackNetrw = 1
+let g:NERDTreeMapJumpNextSibling = 0
+let g:NERDTreeMapJumpPrevSibling = 0
 " }}}
 
 " vim-github-comment {{{ "
