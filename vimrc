@@ -466,5 +466,8 @@ au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 au FileType qml set foldmethod=indent
 " }}}
 
+" mail {{{
+au FileType mail NeoCompleteDisable
+" }}}
 
 " vim:fdm=marker
