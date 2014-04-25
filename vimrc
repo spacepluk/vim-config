@@ -166,6 +166,10 @@ set tabstop=2
 set expandtab
 set smartindent
 
+set undofile
+set undodir=~/.vim/undo
+set undoreload=1000
+
 set backupdir=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
