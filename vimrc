@@ -125,7 +125,6 @@ set mouse=a
 set title
 set foldmethod=syntax
 set scrolloff=6
-set shortmess=atI
 set visualbell
 
 set hlsearch
