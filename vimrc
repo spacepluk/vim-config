@@ -438,6 +438,9 @@ au FileType xml setlocal shiftwidth=4  tabstop=4 expandtab
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 " }}}
 
+" QML {{{
+au FileType qml set foldmethod=indent
+" }}}
 
 
 " vim:fdm=marker
