@@ -411,9 +411,14 @@ au BufRead,BufNewFile *.pde,*.ino setf arduino
 " }}}
 
 " NERDTree {{{
+let g:NERDChristmasTree = 1
+let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeCasadeOpenSingleChildDir = 1
+let g:NERDTreeDirArrows = 1
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeMapJumpNextSibling = 0
 let g:NERDTreeMapJumpPrevSibling = 0
+let g:NERDTreeMinimalUI = 1
 " }}}
 
 " vim-github-comment {{{ "
