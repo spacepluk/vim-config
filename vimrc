@@ -387,6 +387,10 @@ nmap <leader>ag :Ag
 let javascript_enable_domhtmlcss = 1
 " }}}
 
+" json {{{
+let g:vim_json_syntax_conceal = 0
+" }}}
+
 " gist {{{
 let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
