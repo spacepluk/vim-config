@@ -199,7 +199,8 @@ nnoremap <silent> ,mm :Make<CR>
 " Clean quickfix
 nnoremap <leader>cq :call setqflist([])<CR>:redraw!<CR>
 
-" vimdiff mappings
+" vimdiff options
+set diffopt=vertical
 nmap <silent> ,du :diffupdate<CR>
 
 " JSON prettyfier/processor
