@@ -462,6 +462,11 @@ let g:localvimrc_sandbox = 0
 let g:localvimrc_ask = 0
 " }}}
 
+" emmet {{{
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,less EmmetInstall
+" }}}
+
 """ Per-language tweaks
 
 " C/C++ {{{
