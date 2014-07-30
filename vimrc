@@ -170,9 +170,7 @@ set undofile
 set undodir=~/.vim/undo
 set undoreload=1000
 
-set backupcopy=yes
-set backupdir=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vimtmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set noswapfile
 
 let mapleader=","
 let g:html_use_css=1
