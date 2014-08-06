@@ -148,6 +148,7 @@ set lazyredraw
 set showmode
 set mouse=a
 set title
+"set t_ts=k
 set foldmethod=syntax
 set scrolloff=6
 set visualbell
@@ -198,7 +199,7 @@ nnoremap <silent> ,mm :Make<CR>
 nnoremap <leader>cq :call setqflist([])<CR>:redraw!<CR>
 
 " vimdiff options
-set diffopt=vertical
+set diffopt+=vertical
 nmap <silent> ,du :diffupdate<CR>
 
 " JSON prettyfier/processor
