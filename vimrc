@@ -206,6 +206,9 @@ nnoremap <leader>cq :call setqflist([])<CR>:redraw!<CR>
 set diffopt+=vertical
 nmap <silent> ,du :diffupdate<CR>
 
+" Find merge conflict markers
+map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+
 " JSON prettyfier/processor
 nnoremap <leader>jq :!jq '.'
 
@@ -447,6 +450,8 @@ let g:signify_sign_change = '~'
 highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
+
+nnoremap <silent> <leader>gg :SignifyToggle<CR>
 " }}}
 
 " eighties {{{
@@ -470,6 +475,20 @@ let g:localvimrc_ask = 0
 " emmet {{{
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,less EmmetInstall
+" }}}
+
+" fugitive {{{
+ nnoremap <silent> <leader>gs :Gstatus<CR>
+ nnoremap <silent> <leader>gd :Gdiff<CR>
+ nnoremap <silent> <leader>gc :Gcommit<CR>
+ nnoremap <silent> <leader>gb :Gblame<CR>
+ nnoremap <silent> <leader>gl :Glog<CR>
+ nnoremap <silent> <leader>gp :Git push<CR>
+ nnoremap <silent> <leader>gr :Gread<CR>
+ nnoremap <silent> <leader>gw :Gwrite<CR>
+ nnoremap <silent> <leader>ge :Gedit<CR>
+ " Mnemonic _i_nteractive
+ nnoremap <silent> <leader>gi :Git add -p %<CR>
 " }}}
 
 """ Per-language tweaks
