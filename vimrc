@@ -47,7 +47,7 @@ NeoBundle 'vim-scripts/The-NERD-Commenter'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'mmozuras/vim-github-comment'
-NeoBundle 'phleet/vim-mercenary'
+"NeoBundle 'phleet/vim-mercenary'
 NeoBundle 'tpope/vim-fugitive'
 
 " C/C++
