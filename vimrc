@@ -23,6 +23,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'vim-scripts/mru.vim'
+NeoBundle 'myusuf3/numbers.vim'
 
 " Whitespace
 NeoBundle 'editorconfig/editorconfig-vim'
