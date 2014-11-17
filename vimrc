@@ -209,14 +209,14 @@ nmap <leader>f8 :set foldlevel=8<CR>
 nmap <leader>f9 :set foldlevel=9<CR>
 
 " make
-nnoremap <silent> ,mm :Make<CR>
+nnoremap <silent> <leader>mm :Make<CR>
 
 " Clean quickfix
 nnoremap <leader>cq :call setqflist([])<CR>:redraw!<CR>
 
 " vimdiff options
 set diffopt+=vertical
-nmap <silent> ,du :diffupdate<CR>
+nmap <silent> <leader>du :diffupdate<CR>
 
 " Find merge conflict markers
 map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
@@ -248,8 +248,8 @@ nnoremap <leader>ff :Fixq<CR>
 " add current directory's generated tags file to available tags
 autocmd FileType cpp set tags+=~/.vim/tags/std
 autocmd FileType cpp set tags+=~/.vim/tags/qt4
-nnoremap <silent> ,tt :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
-nnoremap <silent> ,gt :!./gentags.sh<CR><CR>
+nnoremap <silent> <leader>tt :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+nnoremap <silent> <leader>gt :!./gentags.sh<CR><CR>
 " }}}
 
 " }}}
@@ -305,7 +305,7 @@ nnoremap <leader>wd :EraseBadWhitespace<CR>
 " }}}
 
 " tagbar {{{
-nnoremap <silent> ,tl :TagbarToggle<CR>
+nnoremap <silent> <leader>tl :TagbarToggle<CR>
 let g:tagbar_sort = 0
 
 " coffeescript support
@@ -352,19 +352,19 @@ let g:protodefprotogetter='~/.vim/bundle/vim-protodef/pullproto.pl'
 " }}}
 
 " fswitch {{{
-nmap <silent> ,of :FSHere<CR>
-nmap <silent> ,ol :FSRight<CR>
-nmap <silent> ,oL :FSSplitRight<CR>
-nmap <silent> ,oh :FSLeft<CR>
-nmap <silent> ,oH :FSSplitLeft<CR>
-nmap <silent> ,ok :FSAbove<CR>
-nmap <silent> ,oK :FSSplitAbove<CR>
-nmap <silent> ,oj :FSBelow<CR>
-nmap <silent> ,oJ :FSSplitBelow<CR>
+nmap <silent> <leader>of :FSHere<CR>
+nmap <silent> <leader>ol :FSRight<CR>
+nmap <silent> <leader>oL :FSSplitRight<CR>
+nmap <silent> <leader>oh :FSLeft<CR>
+nmap <silent> <leader>oH :FSSplitLeft<CR>
+nmap <silent> <leader>ok :FSAbove<CR>
+nmap <silent> <leader>oK :FSSplitAbove<CR>
+nmap <silent> <leader>oj :FSBelow<CR>
+nmap <silent> <leader>oJ :FSSplitBelow<CR>
 " }}}
 
 " doxygen {{{
-nnoremap <silent> ,dd :Dox<CR>
+nnoremap <silent> <leader>dd :Dox<CR>
 " }}}
 
 " Rainbow Parentheses {{{
