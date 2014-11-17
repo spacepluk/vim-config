@@ -24,6 +24,7 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'vim-scripts/mru.vim'
 NeoBundle 'myusuf3/numbers.vim'
+NeoBundle 'spacepluk/directionalWindowResizer'
 
 " Whitespace
 NeoBundle 'editorconfig/editorconfig-vim'
