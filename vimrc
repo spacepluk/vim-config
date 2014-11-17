@@ -35,7 +35,7 @@ NeoBundle 'vim-scripts/IndentAnything'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'tpope/vim-repeat'
@@ -295,7 +295,21 @@ noremap <silent> <Leader>ig :IndentGuidesToggle<CR>
 " }}}
 
 " neocomplete {{{
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " }}}
 
 " bad-whitespace {{{
