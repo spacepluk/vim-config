@@ -190,10 +190,6 @@ color xoria256
 
 " Misc mappings/tweaks {{{
 
-" Always move within wrapped lines
-noremap j gj
-noremap k gk
-
 " Change buffers
 nnoremap <C-p> :bprev<CR>
 nnoremap <C-n> :bnext<CR>
