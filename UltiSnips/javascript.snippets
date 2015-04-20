@@ -1,11 +1,171 @@
-snippet ife "if ___ else"
-if (${1:condition}) {
-	${2://code}
-} else {
-	${3://code}
+# Common patterns
+snippet ':f "object method string"
+'${1:${2:#thing}:${3:click}}': function(element) {
+	${VISUAL}$0
+}${10:,}
+endsnippet
+
+snippet :f "Object Method"
+${1:method_name}: function(${3:attribute}) {
+	${VISUAL}$0
+}${10:,}
+endsnippet
+
+snippet : "Object key key: 'value'"
+${1:key}: ${2:'${3:value}'}
+endsnippet
+
+snippet = "Assignment"
+${1:identifier} = ${2:'${3:value}'}
+endsnippet
+
+snippet f "Anonymous function" w
+function(${1}) {
+	${VISUAL}$0
 }
 endsnippet
 
+snippet fun "function (fun)" w
+function ${1:function_name}(${2}) {
+	${VISUAL}$0
+}
+endsnippet
 
+snippet try "try/catch"
+	try {
+		${VISUAL}$1
+	} catch (${2:err}) {
+		${3:console.error($2)}
+	}
+endsnippet
+
+
+
+# CommonJS
+snippet vre "assignment require"
+var ${1:identifier} = require('${2:module}')
+endsnippet
+
+snippet =re "assignment require"
+${1:identifier} = require('${2:module}')
+endsnippet
+
+snippet =ree "assignment require"
+${1:identifier} = require('$1')
+endsnippet
+
+snippet re "require"
+require('${1:module}')
+endsnippet
+
+snippet me
+module.exports = ${1:value}
+endsnippet
+
+
+
+# lodash
+snippet _ "require lodash"
+_ = require('lodash')
+endsnippet
+
+snippet _each "_each"
+_.each(${1:obj}, function (${2:elem}) {
+	$3
+})
+endsnippet
+
+snippet _find "_find"
+_.find(${1:obj}, function (${2:elem}) {
+	$3
+})
+endsnippet
+
+snippet _map "_map"
+_.map(${1:obj}, function (${2:elem}) {
+	$3
+})
+endsnippet
+
+snippet _reduce "_reduce"
+_.reduce(${1:obj}, function (${1:acc}, ${2:elem}${3:, ${4:idx}}) {
+	$0
+	return $1
+})
+endsnippet
+
+snippet _filter "_filter"
+_.filter(${1:obj}, function (${2:elem}) {
+	$3
+})
+endsnippet
+
+snippet each( "each(" w
+each(function (${1:elem}) {
+	$2
+})
+endsnippet
+
+snippet find( "find(" w
+find(function (${1:elem}) {
+	$2
+})
+endsnippet
+
+snippet map( "map(" w
+map(function (${1:elem}) {
+	$2
+})
+endsnippet
+
+snippet reduce( "reduce("
+reduce(function (${1:acc}, ${2:elem}${3:, ${4:idx}}) {
+	$0
+	return $1
+})
+endsnippet
+
+snippet filter( "filter(" w
+filter(function (${1:elem}) {
+	$2
+})
+endsnippet
+
+
+
+# Bluebird
+snippet bb "require bluebird"
+Promise = require('bluebird')
+endsnippet
+
+snippet then( "then(" w
+then(function (${1:elem}) {
+	${2:console.log($1)}
+})
+endsnippet
+
+snippet catch( "catch(" w
+catch(function (${1:err}) {
+	${2:console.error($1)}
+})
+endsnippet
+
+snippet finally( "finally(" w
+finally(function (${1}) {
+	${2}
+})
+endsnippet
+
+snippet spread( "spread(" w
+catch(function (${1:elem}) {
+	${2}
+})
+endsnippet
+
+
+# Debugging
+snippet cll
+console.log('$1', ${1:value})
+endsnippet
 # vim:ft=snippets:
 
