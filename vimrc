@@ -143,6 +143,27 @@ filetype plugin indent on
 NeoBundleCheck
 " }}}
 
+" Neovim settings {{{
+if has('nvim')
+  " XXX: workaround for libtermkeys problem in tmux
+  if exists('$TMUX')
+    nmap <BS> <C-h>
+  end
+
+  " Terminal navigation
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-h> <C-\><C-n><C-w><C-h>
+  tnoremap <C-j> <C-\><C-n><C-w><C-j>
+  tnoremap <C-k> <C-\><C-n><C-w><C-k>
+  tnoremap <C-l> <C-\><C-n><C-w><C-l>
+  tnoremap <C-f><C-l> <C-l>
+  au WinEnter term://* startinsert
+
+  " enable clipboard
+  set clipboard+=unnamedplus
+endif
+" }}}
+
 
 syntax on
 syntax conceal on
