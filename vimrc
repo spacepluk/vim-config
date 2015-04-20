@@ -33,12 +33,12 @@ NeoBundle 'spacepluk/vim-bad-whitespace'
 NeoBundle 'vim-scripts/IndentAnything'
 
 " General Coding aids
+NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplcache.vim'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'sjl/gundo.vim'
+NeoBundle 'simnalamburt/vim-mundo'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/SyntaxComplete'
@@ -47,8 +47,6 @@ NeoBundle 'vim-scripts/The-NERD-Commenter'
 " VCS
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mhinz/vim-signify'
-NeoBundle 'mmozuras/vim-github-comment'
-"NeoBundle 'phleet/vim-mercenary'
 NeoBundle 'tpope/vim-fugitive'
 
 " C/C++
@@ -67,14 +65,14 @@ NeoBundle 'Shougo/vimproc.vim', {
       \ }
 NeoBundle 'vim-scripts/DoxygenToolkit.vim'
 
-" HTML/Javascript
-NeoBundle 'bigfish/vim-js-context-coloring', {
-      \   'build' : {
-      \     'unix' : 'npm install',
-      \     'mac' : 'npm install',
-      \     'windows' : 'npm install',
-      \   }
-      \ }
+" HTML/CSS/Javascript
+"NeoBundle 'bigfish/vim-js-context-coloring', {
+      "\   'build' : {
+      "\     'unix' : 'npm install',
+      "\     'mac' : 'npm install',
+      "\     'windows' : 'npm install',
+      "\   }
+      "\ }
 NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'marijnh/tern_for_vim', {
@@ -90,8 +88,17 @@ NeoBundle 'moll/vim-node'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'vim-scripts/JavaScript-Indent'
+NeoBundle 'mtscout6/vim-tagbar-css'
 
 " Other languages
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'cespare/vim-toml'
+NeoBundle 'phildawes/racer', {
+      \   'build' : {
+      \     'mac': 'cargo build --release',
+      \     'unix': 'cargo build --release',
+      \   }
+      \ }
 NeoBundle 'artoj/qmake-syntax-vim'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'elzr/vim-json'
@@ -108,13 +115,13 @@ NeoBundle 'tclem/vim-arduino'
 NeoBundle 'vim-scripts/Arduino-syntax-file'
 NeoBundle 'vim-scripts/glsl.vim'
 NeoBundle 'wavded/vim-stylus'
+NeoBundle 'heavenshell/vim-jsdoc'
 
 " Misc
 NeoBundle 'embear/vim-localvimrc'
 NeoBundle 'freitass/todo.txt-vim'
 NeoBundle 'jceb/vim-orgmode'
 NeoBundle 'jpalardy/vim-slime'
-NeoBundle 'mattn/calendar-vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'Soares/butane.vim'
 NeoBundle 'spacepluk/vim-airline'
@@ -127,10 +134,8 @@ NeoBundle 'vim-scripts/ikiwiki-syntax'
 NeoBundle 'vim-scripts/utl.vim'
 
 " Colorschemes
-NeoBundle 'CSApprox'
 NeoBundle 'endel/vim-github-colorscheme'
 NeoBundle 'spacepluk/vim-xoria256'
-NeoBundle 'tomasr/molokai'
 
 call neobundle#end()
 filetype plugin indent on
@@ -292,7 +297,6 @@ noremap <silent> <Leader>ig :IndentGuidesToggle<CR>
 " }}}
 
 " neocomplete {{{
-"let g:neocomplete#enable_at_startup = 1
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplcache.
@@ -417,6 +421,11 @@ nmap <leader>ag :Ag
 let javascript_enable_domhtmlcss = 1
 " }}}
 
+" jsdoc {{{
+let g:jsdoc_default_mapping = 0
+nnoremap <leader>jd :JsDoc<CR>
+" }}}
+
 " json {{{
 let g:vim_json_syntax_conceal = 0
 " }}}
@@ -425,7 +434,7 @@ let g:vim_json_syntax_conceal = 0
 let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
-let g:gist_browser_command = 'iceweasel %URL% &'
+let g:gist_browser_command = 'firefox %URL% &'
 let g:gist_show_privates = 1
 "let g:gist_post_private = 1
 "let g:gist_get_multiplefile = 1
@@ -434,7 +443,7 @@ let g:gist_show_privates = 1
 
 " tern {{{
 let g:tern_map_keys = 1
-let g:tern_show_argument_hints = 'on_hold'
+"let g:tern_show_argument_hints = 'on_hold'
 " }}}
 
 " glsl {{{
@@ -455,11 +464,6 @@ let g:NERDTreeMapJumpNextSibling = 0
 let g:NERDTreeMapJumpPrevSibling = 0
 let g:NERDTreeMinimalUI = 1
 " }}}
-
-" vim-github-comment {{{ "
-let g:github_user = 'spacepluk'
-let g:github_comment_open_browser = 1
-" }}} vim-github-comment "
 
 " vim-js-context-coloring {{{ "
 let g:js_context_colors_enabled = 0
@@ -530,8 +534,9 @@ au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 au FileType qml set foldmethod=indent
 " }}}
 
-" mail {{{
-au FileType mail NeoCompleteDisable
+" Rust completion (race) {{{
+ let g:racer_cmd = "/usr/bin/racer"
+ let $RUST_SRC_PATH="/home/spacepluk/hacking/rust/src/"
 " }}}
 
 " vim:fdm=marker
