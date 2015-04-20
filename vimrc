@@ -250,6 +250,9 @@ map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
 " JSON prettyfier/processor
 nnoremap <leader>jq :!jq '.'
 
+" Force redraw
+noremap <leader>rr :redraw!<CR>
+
 " Email flowed text {{{
 " function stolen from: http://vim.wikia.com/wiki/Correct_format-flowed_email_function
 function! Fixflowed()
