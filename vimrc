@@ -187,18 +187,21 @@ set smartcase
 set wildmenu
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*/.hg,*/.git,*/build/*,*/node_modules,tags
-set completeopt=menu,menuone,preview
+set completeopt=menu,menuone
 
 set shiftwidth=2
 set tabstop=2
 set expandtab
 set smartindent
+set backspace=indent,eol,start
 
 set undofile
 set undodir=~/.vim/undo
 set undoreload=1000
 
 set noswapfile
+set nobackup
+set nowritebackup
 
 let mapleader=","
 let g:html_use_css=1
