@@ -91,6 +91,14 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'vim-scripts/JavaScript-Indent'
 NeoBundle 'mtscout6/vim-tagbar-css'
 
+" Clojure
+NeoBundle 'vim-scripts/paredit.vim'
+NeoBundle 'tpope/vim-leiningen'
+"NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'christoph-frick/vim-fireplace'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'guns/vim-clojure-highlight'
+
 " Other languages
 NeoBundle 'rust-lang/rust.vim'
 NeoBundle 'cespare/vim-toml'
@@ -567,5 +575,10 @@ au FileType qml set foldmethod=indent
  let g:racer_cmd = "/usr/bin/racer"
  let $RUST_SRC_PATH="/home/spacepluk/hacking/rust/src/"
 " }}}
+
+" Clojurescript Figwheel {{{
+command! Figwheel :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
+" }}}
+
 
 " vim:fdm=marker
